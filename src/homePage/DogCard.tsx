@@ -6,26 +6,27 @@ export type DogCardProps = {
 
 export function DogCard({ title, paragraph, imgSrc }: DogCardProps) {
   return (
-    <div className="max-w-sm w-full bg-white rounded-2xl shadow-md overflow-hidden border border-slate-200 hover:shadow-xl transition-shadow duration-300">
-      <img
-        src={imgSrc}
-        alt="Copertina card"
-        className="w-full h-48 object-cover"
-      />
+    <div className="max-w-sm w-full bg-white/90 backdrop-blur rounded-2xl shadow-lg overflow-hidden border border-amber-200 hover:shadow-xl hover:-translate-y-1 transition-all duration-300">
+      <div className="relative">
+        <img
+          src={imgSrc}
+          alt={title}
+          className="w-full h-48 object-cover"
+        />
+        <span className="absolute top-3 left-3 inline-flex items-center gap-1 text-xs font-semibold uppercase tracking-wide text-white bg-amber-500/90 px-2.5 py-1 rounded-full shadow">
+          🐾 Cane
+        </span>
+      </div>
 
       <div className="p-6">
-        <span className="inline-block text-xs font-semibold uppercase tracking-wide text-indigo-600 bg-indigo-50 px-2.5 py-1 rounded-full">
-          Dog
-        </span>
+        <h2 className="text-xl font-bold text-amber-950">{title}</h2>
 
-        <h2 className="mt-3 text-xl font-bold text-slate-800">{title}</h2>
-
-        <p className="mt-2 text-sm text-slate-500 leading-relaxed">
+        <p className="mt-2 text-sm text-amber-800/70 leading-relaxed">
           {paragraph}
         </p>
 
         <div className="mt-5 flex items-center justify-between">
-          <button className="px-4 py-2 text-sm font-semibold text-white bg-indigo-600 rounded-lg hover:bg-indigo-700 transition-colors">
+          <button className="px-4 py-2 text-sm font-semibold text-white bg-amber-500 rounded-full hover:bg-amber-600 transition-colors shadow-sm">
             Visualizza
           </button>
         </div>
