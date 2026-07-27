@@ -20,7 +20,7 @@ const navigation = [
 
 export default function Hero({ children }: HeroProps) {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-
+  
   return (
     <div className="bg-linear-to-b from-amber-50 via-orange-50 to-white min-h-screen">
       <header className="absolute inset-x-0 top-0 z-50">
